@@ -1,0 +1,101 @@
+.header {
+  border-bottom: 1px solid #eee;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+}
+
+.logo-text {
+  font-family: "Brush Script MT", cursive;
+  font-size: 24px;
+  color: #0099cc;
+  margin-left: 10px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.search-button,
+.cart-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  margin-left: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 20px;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #f39c12;
+}
+
+.nav-link.active {
+  color: #f39c12;
+}
+
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .mobile-nav .nav-item {
+    margin: 10px 0;
+  }
+}

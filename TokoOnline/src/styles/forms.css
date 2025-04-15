@@ -1,0 +1,137 @@
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #e11d48;
+  box-shadow: 0 0 0 1px #e11d48;
+}
+
+.form-textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.5em 1.5em;
+}
+
+.form-select:disabled {
+  background-color: #f9fafb;
+  cursor: not-allowed;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radio-input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.checkout-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.form-section {
+  margin-bottom: 1.5rem;
+}
+
+.form-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.order-summary {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.order-item-name {
+  font-weight: 500;
+}
+
+.order-item-variant {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-left: 0.25rem;
+}
+
+.order-item-quantity {
+  color: #6b7280;
+  margin-left: 0.5rem;
+}
+
+.order-summary-divider {
+  border-top: 1px solid #e5e7eb;
+  margin: 1rem 0;
+}
+
+.order-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.order-summary-label {
+  color: #6b7280;
+}
+
+.order-summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+@media (min-width: 768px) {
+  .checkout-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

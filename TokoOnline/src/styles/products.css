@@ -1,0 +1,124 @@
+.products-section {
+  padding: 40px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #eee;
+  transition: box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+  position: relative; /* Penting untuk absolute di dalamnya */
+  width: 100%;
+  height: 300px; /* Sama seperti tinggi gambar */
+  overflow: hidden;
+  border-radius: 8px; /* Opsional */
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Sesuaikan dengan container */
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-brand {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-quantity {
+  margin-bottom: 10px;
+}
+
+.quantity-select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+.add-to-cart-button {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #333;
+}
+
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
