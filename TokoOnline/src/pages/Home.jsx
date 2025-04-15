@@ -6,10 +6,11 @@ import "../styles/products.css";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const slides = [
     {
       id: 1,
-      image: "/images/banner.jpg",
+      image: `${import.meta.env.BASE_URL}images/banner.jpg`,
       title: "",
       subtitle: "",
       content: "Discount 10% All Items-Order Sekarang!",
@@ -35,62 +36,61 @@ export default function Home() {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  // Sample products data
   const products = [
     {
       id: 1,
       name: "Bomber",
       price: 200000,
-      image: "/images/Bomber.jpg",
+      image: `${import.meta.env.BASE_URL}images/Bomber.jpg`,
       brand: "Jaket Bomber Pria",
     },
     {
       id: 2,
       name: "Kemeja",
       price: 150000,
-      image: "/images/Kemeja.jpg",
+      image: `${import.meta.env.BASE_URL}images/Kemeja.jpg`,
       brand: "Kemeja Pria",
     },
     {
       id: 3,
       name: "Kaos",
       price: 75000,
-      image: "/images/kaos.png",
+      image: `${import.meta.env.BASE_URL}images/kaos.png`,
       brand: "Kemeja",
     },
     {
       id: 4,
       name: "Kemeja Putih",
       price: 90000,
-      image: "/images/putih.png",
+      image: `${import.meta.env.BASE_URL}images/putih.png`,
       brand: "Putih",
     },
     {
       id: 5,
       name: "Jaket",
       price: 425000,
-      image: "/images/jakettebal.png",
+      image: `${import.meta.env.BASE_URL}images/jakettebal.png`,
       brand: "Jaket Musim Dingin",
     },
     {
       id: 6,
       name: "Hoodie",
       price: 300000,
-      image: "/images/hoodie.png",
+      image: `${import.meta.env.BASE_URL}images/hoodie.png`,
       brand: "Hoodie Hitam",
     },
     {
       id: 7,
       name: "Jeans",
       price: 449000,
-      image: "/images/jeans.jpg",
+      image: `${import.meta.env.BASE_URL}images/jeans.jpg`,
       brand: "Celana Jeans Pria",
     },
     {
       id: 8,
       name: "Celana Dasar",
       price: 200000,
-      image: "/images/dasar.jpg",
+      image: `${import.meta.env.BASE_URL}images/dasar.jpg`,
       brand: "Celana Dasar Pria",
     },
   ];
@@ -105,7 +105,7 @@ export default function Home() {
             className={`hero-slide ${index === currentSlide ? "active" : ""}`}
           >
             <img
-              src={slide.image || "/placeholder.svg"}
+              src={slide.image || `${import.meta.env.BASE_URL}placeholder.svg`}
               alt={slide.title || "Hero Image"}
               className="hero-image"
             />
@@ -141,7 +141,10 @@ export default function Home() {
                 <Link to={`/products/${product.id}`}>
                   <div className="product-image-container">
                     <img
-                      src={product.image || "/placeholder.svg"}
+                      src={
+                        product.image ||
+                        `${import.meta.env.BASE_URL}placeholder.svg`
+                      }
                       alt={product.name}
                       className="product-image"
                     />
