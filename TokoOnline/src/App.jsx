@@ -14,7 +14,7 @@ function App() {
     <CartProvider>
       {" "}
       {/* Membungkus seluruh aplikasi dengan CartProvider */}
-      <Router>
+      <Router basename="/project-frontend-react/">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
